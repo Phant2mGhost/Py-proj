@@ -1,0 +1,5 @@
+file = open("entrep.txt", "r")
+lines = file.read()
+new_lines = lines.replace("**", "")
+print(new_lines)
+file.close()
