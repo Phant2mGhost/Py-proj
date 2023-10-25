@@ -1,32 +1,32 @@
-import dict_function as df
+import funct as f
 
 #input
 name_time = input("Enter:\n(Name: time time...; Name: time...; Name: time...)\n=====================================\n")
 
 #{name: time}
 solveList = name_time.replace(": ", "\n").replace("; ", "\n").splitlines()
-solveDict = df.solveDict(solveList)
+solveDict = f.solveDict(solveList)
 print("=================(1)=================")
 print(solveDict)
 
 #{name: time-list}
-listDict = df.listDict(solveDict)
+listDict = f.listDict(solveDict)
 print("=================(2)=================")
 print(listDict)
 
 #str to int
-intList = df.intList(listDict)
+intList = f.intList(listDict)
 print("=================(3)=================")
 print(intList)
 
 #fastest and slowest
-fastest = df.fastest(intList)
-slowest = df.slowest(intList)
+fastest = f.fastest(intList)
+slowest = f.slowest(intList)
 print("=================(4)=================")
 print(fastest)
 print(slowest)
 
 #remove fastest and slowest from intList
-new_intList = df.new_intList(intList, fastest, slowest)
+new_intList = f.new_intList(intList, fastest, slowest)
 print("=================(5)=================")
 print(new_intList)
