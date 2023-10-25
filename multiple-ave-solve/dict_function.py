@@ -17,3 +17,13 @@ def intList(listDict):
     for key, value in listDict.items():
         intList[key] = list(map(float, value))
     return intList
+
+def new_intList(intList, fastest, slowest):
+    new_intList = {}
+    for key, values in intList.items():
+        copy_values = values[:]
+        for value in values:
+            if value in fastest.values() or value in slowest.values():
+                copy_values.remove(value)
+        new_intList[key] = copy_values
+    return new_intList

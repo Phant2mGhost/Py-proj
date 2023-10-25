@@ -28,3 +28,8 @@ for key, value in intList.items():
 print("=================(4)=================")
 print(fastest)
 print(slowest)
+
+#remove fastest and slowest from intList
+new_intList = df.new_intList(intList, fastest, slowest)
+print("=================(5)=================")
+print(new_intList)
