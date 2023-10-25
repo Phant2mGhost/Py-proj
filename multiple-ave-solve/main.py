@@ -30,3 +30,8 @@ print(slowest)
 new_intList = f.new_intList(intList, fastest, slowest)
 print("=================(5)=================")
 print(new_intList)
+
+#mean
+mean = f.mean(new_intList)
+print("=================(6)=================")
+print(mean)

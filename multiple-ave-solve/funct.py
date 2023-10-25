@@ -1,3 +1,5 @@
+import numpy as np
+
 def solveDict(solveList):
     solveDict = {}
     for i in range(0, len(solveList),2):
@@ -39,3 +41,10 @@ def new_intList(intList, fastest, slowest):
                 copy_values.remove(value)
         new_intList[key] = copy_values
     return new_intList
+
+def mean(new_intList):
+    mean = {}
+    for key, values in new_intList.items():
+        mean[key] = np.mean(values)
+    return mean
+
