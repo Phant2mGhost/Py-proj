@@ -3,7 +3,7 @@ import re
 uInput = input('Enter Numbers: ')
 
 #input to list
-nList = re.split(',|-|_', uInput)
+nList = re.split(',|-|_| ', uInput)
 
 #str to int
 nInt_1 = [int(n) for n in nList]
