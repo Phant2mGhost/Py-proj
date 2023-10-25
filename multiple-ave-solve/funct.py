@@ -30,6 +30,11 @@ def slowest(intList):
     slowest = {}
     for key, value in intList.items():
         slowest[key] = max(value)
+    for key, value in slowest.items():
+        if value == 1000000.0:
+            slowest[key] = "DNF"
+        else:
+            slowest[key] = value
     return slowest
 
 def new_intList(intList, fastest, slowest):
