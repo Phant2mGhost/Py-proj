@@ -20,11 +20,8 @@ print("=================(3)=================")
 print(intList)
 
 #fastest and slowest
-fastest = {}
-slowest = {}
-for key, value in intList.items():
-    fastest[key]  = min(value)
-    slowest[key]  = max(value)
+fastest = df.fastest(intList)
+slowest = df.slowest(intList)
 print("=================(4)=================")
 print(fastest)
 print(slowest)

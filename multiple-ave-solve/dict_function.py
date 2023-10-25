@@ -18,6 +18,18 @@ def intList(listDict):
         intList[key] = list(map(float, value))
     return intList
 
+def fastest(intList):
+    fastest = {}
+    for key, value in intList.items():
+        fastest[key] = min(value)
+    return fastest
+
+def slowest(intList):
+    slowest = {}
+    for key, value in intList.items():
+        slowest[key] = max(value)
+    return slowest
+
 def new_intList(intList, fastest, slowest):
     new_intList = {}
     for key, values in intList.items():
