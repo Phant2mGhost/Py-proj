@@ -6,6 +6,14 @@ def solveDict(solveList):
 
 def listDict(solveDict):
     listDict = {}
+    dnf = "DNF"
+    DNF = "1000000"
     for key, value in solveDict.items():
-        listDict[key] = value.split()
+        listDict[key] = value.replace(dnf, DNF).split()
     return listDict
+
+def intList(listDict):
+    intList = {}
+    for key, value in listDict.items():
+        intList[key] = list(map(float, value))
+    return intList
