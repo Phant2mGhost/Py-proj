@@ -38,11 +38,18 @@ print(new_intList)
 mean = f.mean(new_intList)
 print("=================(6)=================")
 print(mean)
-print("================(...)================")
+
+#ranking
+print("=================(7)=================")
+sort_mean = f.sort_mean(mean)
+print(sort_mean)
+
+
+print("==============(.......)==============")
 print("|||||||||||||||||||||||||||||||||||||")
 print("==============(Results)==============")
 
-#farmat results
+#format results
 for mean_key, mean_value in mean.items():
     #display name
     print(f"================({mean_key})================")
@@ -53,3 +60,14 @@ for mean_key, mean_value in mean.items():
     #display fastest and slowest
     print(f"Fastest: {fastest[mean_key]}")
     print(f"Slowest: {slowest[mean_key]}")
+
+print("==============(.......)==============")
+print("|||||||||||||||||||||||||||||||||||||")
+print("==============(Ranking)==============")
+
+#display ranking
+rank = 1
+for key in sort_mean.keys():
+    print(f"{rank}: {key}")
+    rank += 1
+print("==============(.......)==============")

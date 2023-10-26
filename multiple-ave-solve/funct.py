@@ -55,3 +55,11 @@ def mean(new_intList):
         mean[key] = np.mean(values)
     return mean
 
+def sort_mean(mean):
+    copy_mean = mean.copy()
+    sort_mean = {}
+    while len(copy_mean) != 0:
+        fst_ave_key = min(copy_mean, key=copy_mean.get)
+        sort_mean[fst_ave_key] = copy_mean[fst_ave_key]
+        del copy_mean[fst_ave_key]
+    return sort_mean
