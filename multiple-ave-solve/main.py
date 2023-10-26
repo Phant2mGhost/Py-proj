@@ -1,7 +1,10 @@
 import funct as f
 
-#input
-name_time = input("Enter:\n(Name: time time...; Name: time...; Name: time...)\n=====================================\n")
+#extract text from time-s.txt
+file = open("time-s.txt", "r")
+name_time = file.read()
+print("=================(0)=================")
+print(name_time)
 
 #{name: time}
 solveList = name_time.replace(": ", "\n").replace("; ", "\n").splitlines()
