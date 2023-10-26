@@ -77,3 +77,6 @@ for key in sort_mean.keys():
     print(f"{rank}: {key}")
     rank += 1
 print("==============(.......)==============")
+print("By Phan2mGhost")
+print("==============(.......)==============")
+
