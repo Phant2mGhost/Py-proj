@@ -38,18 +38,12 @@ print(new_intList)
 mean = f.mean(new_intList)
 print("=================(6)=================")
 print(mean)
-print("================(...)================")
 print("|||||||||||||||||||||||||||||||||||||")
 print("==============(Results)==============")
 
-#farmat results
+#dispay name
 for mean_key, mean_value in mean.items():
-    #display name
     print(f"================({mean_key})================")
-    
     #display mean
     print(f"Ao12: {mean_value}")
-
-    #display fastest and slowest
-    print(f"Fastest: {fastest[mean_key]}")
-    print(f"Slowest: {slowest[mean_key]}")
+    
