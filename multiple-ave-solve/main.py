@@ -50,12 +50,18 @@ print("|||||||||||||||||||||||||||||||||||||")
 print("==============(Results)==============")
 
 #format results
+listSolves = list(intList.values())
+numSolves = len(listSolves[0])
+
+#display num of solves
+print(f"=============({numSolves} Solves)=============")
+
 for mean_key, mean_value in mean.items():
     #display name
     print(f"================({mean_key})================")
     
     #display mean
-    print(f"Ao12: {mean_value}")
+    print(f"Ao{numSolves}: {mean_value}")
 
     #display fastest and slowest
     print(f"Fastest: {fastest[mean_key]}")
