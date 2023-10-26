@@ -27,28 +27,30 @@ def fastest(intList):
     return fastest
 
 def slowest(intList):
+    initSlowest = {}
     slowest = {}
     for key, value in intList.items():
-        slowest[key] = max(value)
-    for key, value in slowest.items():
+        initSlowest[key] = max(value)
+    for key, value in initSlowest.items():
         if value == 1000000.0:
             slowest[key] = "DNF"
         else:
             slowest[key] = value
-    return slowest
+    return slowest, initSlowest
 
-def new_intList(intList, fastest, slowest):
+def new_intList(intList, fastest, initSlowest):
     new_intList = {}
     for key, values in intList.items():
         copy_values = values[:]
         for value in values:
-            if value in fastest.values() or value in slowest.values():
+            if value in fastest.values() or value in initSlowest.values():
                 copy_values.remove(value)
         new_intList[key] = copy_values
     return new_intList
 
 def mean(new_intList):
     mean = {}
+    meanValues = []
     for key, values in new_intList.items():
         mean[key] = np.mean(values)
     return mean

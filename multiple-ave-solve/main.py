@@ -24,13 +24,13 @@ print(intList)
 
 #fastest and slowest
 fastest = f.fastest(intList)
-slowest = f.slowest(intList)
+slowest, initSlowest = f.slowest(intList)
 print("=================(4)=================")
 print(fastest)
 print(slowest)
 
 #remove fastest and slowest from intList
-new_intList = f.new_intList(intList, fastest, slowest)
+new_intList = f.new_intList(intList, fastest, initSlowest)
 print("=================(5)=================")
 print(new_intList)
 
